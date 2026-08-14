@@ -33,9 +33,9 @@ test("navigates from Home to About (once for each elm on About) and clicks the B
   await expect(page.locator("button[class=counter]")).not.toBeAttached();
   await page.click('nav a[href="/about"]'); // 4
   await expect(page.locator("button[class=counter]")).toBeAttached();
-  await expect(page.locator("button[class=counter]")).toHaveText("0");
+  await expect(page.locator("button[class=counter]")).toHaveText("Click Me: 0");
   await page.click('button[class=counter]'); // 5
-  await expect(page.locator("button[class=counter]")).toHaveText("1");
+  await expect(page.locator("button[class=counter]")).toHaveText("Click Me: 1");
 
   expect(errors).toEqual([]);
 });
